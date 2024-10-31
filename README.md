@@ -1,6 +1,6 @@
 # StainRestorer
 
-High-Fidelity Document Stain Removal via A Large-Scale Real-World Dataset and A Memory-Augmented Transformer
+[**High-Fidelity Document Stain Removal via A Large-Scale Real-World Dataset and A Memory-Augmented Transformer**](https://arxiv.org/abs/2410.22922)
 
 <div>
 <span class="author-block">
