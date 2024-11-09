@@ -29,7 +29,7 @@ def infer():
     testloader = DataLoader(dataset=val_dataset, batch_size=1, shuffle=False, num_workers=8, drop_last=False, pin_memory=True)
 
     # Model & Metrics
-    model = Model()
+    model = StainRestorer()
 
     load_checkpoint(model, opt.TESTING.WEIGHT)
 
@@ -54,7 +54,7 @@ def infer():
 
         start_time = time.time()
         with torch.no_grad():
-            res = model(inp)
+            res = model(inp)[0]
         end_time = time.time()
 
         total_time += end_time - start_time

@@ -23,5 +23,5 @@ TRAINING:
   ORI: False
 
 TESTING:
-  WEIGHT: './checkpoints/best.pth'
+  WEIGHT: '/Users/vietxuanpham/Documents/work/PersonalProject/StainRestorer/checkpoints/DocNLC_epoch_1.pth'
   SAVE_IMAGES: True

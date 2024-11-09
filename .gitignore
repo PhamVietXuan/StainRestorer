@@ -162,3 +162,13 @@ cython_debug/
 #.idea/
 
 .DS_Store
+/env
+/result
+/dataset
+*.pth
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.bmp
+*.tiff

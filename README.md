@@ -1,5 +1,7 @@
 # StainRestorer
 
+PVXuan: This repo is forked from [StainRestorer](https://github.com/CXH-Research/StainRestorer). I made some changes to the code: re-train the model and do something else.
+
 [**High-Fidelity Document Stain Removal via A Large-Scale Real-World Dataset and A Memory-Augmented Transformer**](https://arxiv.org/abs/2410.22922)
 
 <div>
@@ -43,18 +45,43 @@ StainDoc is the first large-scale high-resolution dataset that includes ground t
 StainDoc_mark and StainDoc_seal are made with the process in [DocDiff](https://github.com/Royalvice/DocDiff).
 
 # ⚙️ Usage
+PVXuan: There is some change in the code that I made. I will update the README.md and code later.
+
+## Install needed package 
+
+Optional: You should create virtual environment to install the package.
+
+for Mac/Linux
+```bash
+  python -m venv stainrestorer_env
+  source stainrestorer_env/bin/activate
+
+```
+for Windows
+```bash
+  python -m venv stainrestorer_env
+  stainrestorer_env\Scripts\activate
+```
+
+Install the package
+```bash
+  pip install -r requirements.txt
+```
 
 ## Training
 You may download the dataset first, and then specify TRAIN_DIR, VAL_DIR and SAVE_DIR in the section TRAINING in `config.yml`.
 
+PVXuan note: The dataset size is too large(zip file is 49GB, and need ~ 100GB to unzip). 
+the training process is quite slow(I trained 1 epoch in 1 GPU T4 in about 3 hours).
+
 For single GPU training:
-```
-python train.py
+```bash
+  python train.py
 ```
 For multiple GPUs training:
-```
-accelerate config
-accelerate launch train.py
+```bash
+  accelerate config
+  accelerate launch train.py
 ```
 If you have difficulties with the usage of `accelerate`, please refer to <a href="https://github.com/huggingface/accelerate">Accelerate</a>.
 
@@ -63,11 +90,9 @@ If you have difficulties with the usage of `accelerate`, please refer to <a href
 Please first specify TRAIN_DIR, VAL_DIR and SAVE_DIR in section TESTING in `config.yml`.
 
 ```bash
-python infer.py
+  python infer.py
 ```
 
-# Citation
+# [Citation](https://github.com/CXH-Research/StainRestorer)
 
-```bib
-```
 
